@@ -3,7 +3,7 @@
  Fiz um aplicativo para consultar o tempo em qualquer cidade do mundo, utilizando a API do OpenWeather com a biblioteca Retrofit.
  Através dessa API, consegui aprender um pouco mais, sobre o funcionamento e como consumir dados.
  Aprendi a alterar entre o tema claro e o tema escuro.
- Essa primeira versão do aplicativo, fiz com um layout bem simplies, mas irei melhorar mais e mais com o tempo, onde irei colocar imagens no fundo, de acordo com o clima na região.
+ Essa primeira versão do aplicativo, fiz com um layout bem simples, mas irei melhorar mais e mais com o tempo, onde irei colocar imagens no fundo, de acordo com o clima na região.
  
  Para desenvolvê-lo, utilizei várias ferramentas e tecnologias, como:
 • Kotlin
