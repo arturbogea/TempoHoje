@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue_300"
+    android:id="@+id/layout_principal"
+    tools:context=".MainActivity">
+
+    <Switch
+        android:id="@+id/tema"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/txt_temperatura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="20 °C"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tema"
+        android:gravity="center"
+        android:layout_margin="50dp"/>
+
+    <TextView
+        android:id="@+id/txt_paiscidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Brasil - Curitiba"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_temperatura"/>
+
+    <ImageView
+        android:id="@+id/img_clima"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/clearsky"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_paiscidade" />
+
+    <View
+        android:id="@+id/container_info"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/container_info_tema_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_clima"/>
+
+    <TextView
+        android:id="@+id/txt_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Informações adicionais"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/container_info"
+        app:layout_constraintStart_toStartOf="@+id/container_info"
+        app:layout_constraintTop_toTopOf="@+id/container_info" />
+
+    <TextView
+        android:id="@+id/informacoes1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Clima \n céu limpo \n\n Umidade \n 48"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/container_info"
+        app:layout_constraintStart_toStartOf="@+id/container_info"
+        app:layout_constraintTop_toBottomOf="@+id/txt_info"
+        app:layout_constraintEnd_toStartOf="@id/informacoes2" />
+
+    <TextView
+        android:id="@+id/informacoes2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Temperatura min \n 10  \n\n Temperatura max \n 28"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/container_info"
+        app:layout_constraintEnd_toEndOf="@+id/container_info"
+        app:layout_constraintStart_toEndOf="@+id/informacoes1"
+        app:layout_constraintTop_toBottomOf="@+id/txt_info" />
+
+    <EditText
+        android:id="@+id/edit_buscar_cidade"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="Buscar cidade"
+        android:padding="15dp"
+        android:maxLines="1"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_info"
+        app:layout_constraintEnd_toStartOf="@id/bt_buscar"/>
+
+    <Button
+        android:id="@+id/bt_buscar"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="15dp"
+        android:backgroundTint="@color/dark_blue_600"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edit_buscar_cidade"
+        app:layout_constraintTop_toBottomOf="@+id/container_info" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_buscar_cidade"
+        android:visibility="invisible"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
